@@ -682,22 +682,26 @@ nav {
   background-color: var(--primery-white-color);
   transition: var(--transition-property), var(--transition-duration-timing);
 }
+
+.close-modal :hover,
+.close-modal :focus {
+  /* color: var(--accent-color); */
+  cursor: pointer;
+}
 .close-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: currentColor;
+  /* fill: currentColor; */
+}
+.close-icon:hover,
+.close-icon:focus {
+  fill: var(--accent-color); 
 }
 
-.close-modal:hover,
-.close-modal:focus {
-  /* fill: var(--accent-color); */
-  background-color: var(--bgr-icon);
-  cursor: pointer;
-}
-
-.modal-call-to-action {
+.modal-call-to-action 
+{
   display: block;
   margin-bottom: 12px;
   font-weight: 700;
@@ -707,6 +711,7 @@ nav {
   letter-spacing: 0.03em;
   color: var(--txt-title-color);
 }
+
 .modal-form {
   width: 448px;
 }
