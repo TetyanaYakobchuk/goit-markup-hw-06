@@ -15,7 +15,7 @@
   --border-header: #ececec;
   --footer-subscribe: rgba(255, 255, 255, 0.6);
   --transition-property: color, fill, background-color, box-shadow, border-color;
-  --transition-duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration-timing: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -238,7 +238,6 @@ nav {
   margin: auto;
 }
 
-
 .advantages {
   display: flex;
   margin: -15px;
@@ -348,7 +347,6 @@ nav {
 .team-faces {
   display: flex;
   align-items: center;
-  /* height: 426px; */
   width: 1170px;
   margin-right: 0;
 }
@@ -359,7 +357,6 @@ nav {
 .team-card {
   width: 270px;
   border-radius: 0px 0px 4px 4px;
-  /* margin: 15px; */
   background-color: var(--primery-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -396,6 +393,7 @@ nav {
   display: block;
   transition: var(--transition-property), var(--transition-duration-timing);
 }
+
 .section-icon {
   display: inline-block;
   padding: 12px;
@@ -407,11 +405,16 @@ nav {
   border-radius: 50%;
   color: var(--txt-icon);
   transition: var(--transition-property), var(--transition-duration-timing);
+  
 }
 .section-icon:hover,
-.section-icon:focus {
+.section-icon:focus,
+.section-icon:hover svg,
+.section-icon:focus svg{
   background-color: var(--accent-color);
   color: var(--primery-white-color);
+  transition: var(--transition-property), var(--transition-duration-timing);
+
 }
 /* ---------------CLIENTS------------------ */
 
@@ -435,10 +438,14 @@ nav {
   transition: var(--transition-property), var(--transition-duration-timing);
 }
 .client-icon:hover,
-.client-icon:focus {
-  color: var(--accent-color);
+.client-icon:focus,
+.client-icon:hover svg,
+.client-icon:focus svg {
   border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  transition: var(--transition-property), var(--transition-duration-timing);
 }
+
 .client-logo li:not(:last-child) {
   margin-right: 30px;
 }
