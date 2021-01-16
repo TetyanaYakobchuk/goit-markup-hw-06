@@ -15,7 +15,7 @@
   --border-header: #ececec;
   --footer-subscribe: rgba(255, 255, 255, 0.6);
   --transition-property: color, fill, background-color, box-shadow, border-color;
-  --transition-duration-timing: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -419,7 +419,7 @@ nav {
 /* ---------------CLIENTS------------------ */
 
 .client {
-  width: 1600px;
+  width: auto;
   margin: auto;
 }
 .client-logo {
@@ -466,8 +466,19 @@ nav {
 .footer {
   width: auto;
   background: #2f303a;
+  margin: auto;
 }
 .footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: baseline;
+}
+.footer-container {
+  width: 1200px;
+  height: 705px;
+  padding: 94px 0;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
@@ -968,8 +979,9 @@ nav {
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform, var(--transition-duration-timing);
 }
-.projects:hover .portfolio-image-caption {
-  transform: translateY(0);
+.portfolio-link:hover .portfolio-image-caption,
+.portfolio-link:focus .portfolio-image-caption {
+  transform: translateY(0%);
 }
 .portfolio-image-caption-text {
   font-weight: 400;
@@ -979,7 +991,6 @@ nav {
 }
 
 .portfolio-content {
-  /* height: 111px; */
   padding: 20px 24px;
   border-right: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
